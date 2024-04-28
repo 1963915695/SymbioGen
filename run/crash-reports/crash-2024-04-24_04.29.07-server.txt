@@ -1,0 +1,193 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 2024-04-24 04:29:07
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.client.player.LocalPlayer.getUUID()" because "minecraft.player" is null
+	at com.mods.symbiogen.world.event.SygEntity.onLivingDeath(SyGEntity.java:59) ~[%23196!/:?] {re:classloading}
+	at com.mods.symbiogen.world.event.__SyGEntity_onLivingDeath_LivingDeathEvent.invoke(.dynamic) ~[%23196!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDeath(ForgeHooks.java:305) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.die(LivingEntity.java:1374) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.npc.AbstractVillager.die(AbstractVillager.java:188) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.npc.Villager.die(Villager.java:585) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,xf:fml:forge:forge_method_redirector}
+	at net.minecraft.world.entity.LivingEntity.hurt(LivingEntity.java:1242) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1504) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:163) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:154) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:78) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:139) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:805) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2694) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:581) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2440) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.tick(Mob.java:369) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:702) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:522) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$6(ServerLevel.java:346) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:326) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:936) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:857) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:95) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:679) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: 
+	symbiogen (symbiogen), Version: 1.0-SNAPSHOT
+		at TRANSFORMER/symbiogen@1.0-SNAPSHOT/com.mods.symbiogen.world.event.SygEntity.onLivingDeath(SyGEntity.java:59)
+Stacktrace:
+	at com.mods.symbiogen.world.event.SygEntity.onLivingDeath(SyGEntity.java:59) ~[%23196!/:?] {re:classloading}
+	at com.mods.symbiogen.world.event.__SyGEntity_onLivingDeath_LivingDeathEvent.invoke(.dynamic) ~[%23196!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%23115!/:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDeath(ForgeHooks.java:305) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
+	at net.minecraft.world.entity.LivingEntity.die(LivingEntity.java:1374) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.npc.AbstractVillager.die(AbstractVillager.java:188) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.npc.Villager.die(Villager.java:585) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,xf:fml:forge:forge_method_redirector}
+	at net.minecraft.world.entity.LivingEntity.hurt(LivingEntity.java:1242) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.doHurtTarget(Mob.java:1504) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:163) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:154) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.WrappedGoal.tick(WrappedGoal.java:78) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.ai.goal.GoalSelector.tickRunningGoals(GoalSelector.java:139) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.serverAiStep(Mob.java:805) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.aiStep(LivingEntity.java:2694) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.aiStep(Mob.java:581) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2440) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.world.entity.Mob.tick(Mob.java:369) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:702) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:522) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$6(ServerLevel.java:346) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:326) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+-- Entity being ticked --
+Details:
+	Entity Type: symbiogen:symbiogen_master_zomble (com.mods.symbiogen.world.registers.entity.SyGMaster_Zomble)
+	Entity ID: 60
+	Entity Name: entity.symbiogen.symbiogen_master_zomble
+	Entity's Exact location: 78.00, -60.00, -68.50
+	Entity's Block location: World: (77,-60,-69), Section: (at 13,4,11 in 4,-4,-5; chunk contains blocks 64,-64,-80 to 79,319,-65), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,-64,-512 to 511,319,-1)
+	Entity's Momentum: -0.01, -0.08, -0.03
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.world.level.Level.guardEntityTick(Level.java:522) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.lambda$tick$6(ServerLevel.java:346) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:326) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:936) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:857) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:95) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:679) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 0 total; []
+	Chunk stats: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,-60,0), Section: (at 0,4,0 in 0,-4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 104692 game time, 42737 day time
+	Level name: 新的世界
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: true
+	Level weather: Rain time: 148580 (now: false), thunder time: 4149 (now: true)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:936) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:857) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:95) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:679) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.9, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Azul Systems, Inc.
+	Memory: 1395139168 bytes (1330 MiB) / 2166358016 bytes (2066 MiB) up to 4257218560 bytes (4060 MiB)
+	CPUs: 8
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 10
+	Microarchitecture: Coffee Lake
+	Frequency (GHz): 2.40
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: NVIDIA GeForce GTX 1650
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x1f91
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.3713
+	Graphics card #1 name: Intel(R) UHD Graphics 630
+	Graphics card #1 vendor: Intel Corporation (0x8086)
+	Graphics card #1 VRAM (MB): 1024.00
+	Graphics card #1 deviceId: 0x3e9b
+	Graphics card #1 versionInfo: DriverVersion=27.20.100.9168
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 26475.96
+	Virtual memory used (MB): 16966.66
+	Swap memory total (MB): 10240.00
+	Swap memory used (MB): 525.34
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 0 / 8; []
+	Data Packs: vanilla, mod:forge, mod:symbiogen (incompatible), mod:geckolib, mod:jei
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	Launched Version: MOD_DEV
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.18.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.18.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.18.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.18.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.18.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.20.1-47.2.18_mapped_parchment_2023.09.03-1|Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |47.2.18             |DONE      |Manifest: NOSIGNATURE
+		main                                              |symbiogen                     |symbiogen                     |1.0-SNAPSHOT        |DONE      |Manifest: NOSIGNATURE
+		geckolib-388172-5188427_mapped_parchment_2023.09.0|GeckoLib 4                    |geckolib                      |4.4.4               |DONE      |Manifest: NOSIGNATURE
+		jei-1.20.1-forge-15.3.0.4_mapped_parchment_2023.09|Just Enough Items             |jei                           |15.3.0.4            |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: f0e649ed-158b-4f12-b96e-b911f9e92c9d
+	FML: 47.2
+	Forge: net.minecraftforge:47.2.18

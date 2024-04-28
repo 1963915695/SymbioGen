@@ -1,0 +1,106 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.move": {
+			"animation_length": 9.04167,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 200) * 25", 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 25", 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"0.0": {
+							"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+						},
+						"9.0417": {
+							"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.model.idle": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone2": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone4": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone3": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				},
+				"bone5": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 200) * 4", 0, 0]
+					}
+				}
+			}
+		},
+		"animation.model.att": {
+			"animation_length": 1,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-88, 0, 0]
+						},
+						"0.4167": {
+							"vector": ["Math.cos(query.life_time * 200) * 90", 0, 0]
+						}
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"0.0": {
+							"vector": [-90, 0, 0]
+						},
+						"0.4167": {
+							"vector": ["Math.cos(query.life_time * 200) * 90", 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

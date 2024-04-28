@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.att": {
+			"animation_length": 1.25,
+			"bones": {
+				"bone2": {
+					"rotation": ["-Math.cos(query.life_time * 300) *3", 0, 0]
+				},
+				"bone": {
+					"rotation": ["Math.cos(query.life_time * 300) *3", 0, 0]
+				}
+			}
+		},
+		"animation.model.move": {
+			"loop": true,
+			"bones": {
+				"bone2": {
+					"rotation": ["-Math.cos(query.life_time * 200) *4", 0, 0]
+				},
+				"bone": {
+					"rotation": ["Math.cos(query.life_time * 200) *4", 0, 0]
+				},
+				"leg1": {
+					"rotation": ["-Math.cos(query.life_time * 200) *20", 0, 0]
+				},
+				"leg2": {
+					"rotation": ["Math.cos(query.life_time * 200) *20", 0, 0]
+				},
+				"leg3": {
+					"rotation": ["Math.cos(query.life_time * 200) *20", 0, 0],
+					"position": [0, "-Math.cos(query.life_time * 200) *0.8", 0]
+				},
+				"leg4": {
+					"rotation": ["-Math.cos(query.life_time * 200) *20", 0, 0],
+					"position": [0, "Math.cos(query.life_time * 200) *0.8", 0]
+				}
+			}
+		},
+		"animation.unknown.idle": {
+			"loop": true
+		}
+	}
+}

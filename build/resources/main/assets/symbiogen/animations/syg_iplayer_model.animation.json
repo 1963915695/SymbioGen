@@ -1,0 +1,91 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.move": {
+			"loop": true,
+			"bones": {
+				"left_arm": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"left_sleve": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"right_sleve": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"left_pants": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				},
+				"right_pants": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 300) * 25", 0, 0]
+					}
+				}
+			}
+		},
+		"animation.model.idle": {
+			"animation_length": 16.125,
+			"bones": {
+				"head": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"right_arm": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"left_pants": {
+					"rotation": {
+						"vector": ["Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": ["-Math.cos(query.life_time * 300) * 1", 0, 0]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

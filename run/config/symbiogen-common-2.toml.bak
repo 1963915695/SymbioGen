@@ -1,0 +1,15 @@
+#Default value for evolution stage is 0-12.
+#Range: 0 ~ 12
+evolution_stage = 0
+#Safety period Default is 7.
+#Range: > 0
+safety_period = 7
+enable = true
+amount = 1.0
+soundVolume = 1.0
+size = 0.5
+speed = 0.3
+spread = 60.0
+melee = 0
+trident = 0
+

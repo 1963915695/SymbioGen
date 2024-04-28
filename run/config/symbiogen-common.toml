@@ -1,0 +1,8 @@
+#Default value for evolution stage is 0-12.
+#Range: 0 ~ 12
+evolution_stage = 0
+#Safety period Default is 7.
+#Range: > 0
+safety_period = 7
+enable = true
+
